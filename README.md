@@ -18,7 +18,9 @@
 NPM install
 
 ## Usage
-Clone the starter code, install the packages and enjoy! 
+Clone the starter code, install the packages and enjoy! Type "node index.js" in the terminal to start the app in the local host. 
+
+Functionality Video: https://www.youtube.com/watch?v=M0g437ndmtc
 
 ## License
 This project was created using the [MIT License](https://opensource.org/licenses/MIT-License).
