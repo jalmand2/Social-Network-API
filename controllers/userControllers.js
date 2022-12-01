@@ -9,14 +9,14 @@ module.exports = {
         res.status(500).json(err));
     },
     getSingleUser(req, res) {
-        User.findOne({ _id: req.param.userId})
+        User.findOne({ _id: req.params.userId})
         .select('-__v')
         .populate('friends')
         .populate('thoughts')
         .then((user) => 
         !user
         ? res.status(404).json({
-            message: `No user found with this id: ${req.param.userId}`
+            message: `No user found with this id: ${req.params.userId}`
         })
         : res.status(200).json(user)
         )
@@ -33,8 +33,7 @@ module.exports = {
         User.findOneAndUpdate(
             { _id: req.params.userId },
             { $set: req.body },
-            { runValidators: true},
-            { new: true }
+            { runValidators: true, new: true },
         )
         .then((user) => 
         !user
