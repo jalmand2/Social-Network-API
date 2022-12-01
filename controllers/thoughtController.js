@@ -1,5 +1,4 @@
-const { Thought, User } = require('../models');
-const { post } = require('../routes/api');
+const { Thought, User } = require('../models/');
 
 module.exports = {
     getThoughts(req, res) {
